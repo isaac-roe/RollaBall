@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private int count;
     private float movementX;
     private float movementY;
+    private Scene currentScene;
+    private int buildIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
         SetCountText();
         winTextObject.SetActive(false);
+
+        currentScene = SceneManager.GetActiveScene();
+        buildIndex = currentScene.buildIndex;
     }
 
     void OnMove(InputValue movementValue)
@@ -57,6 +63,11 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
 
             SetCountText();
+        }
+
+        if (count == 12)
+        {
+            SceneManager.LoadScene(buildIndex + 1);
         }
     }
 }
