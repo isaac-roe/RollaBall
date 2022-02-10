@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject levelCompleteObject;
 
     private Rigidbody rb;
     private int count;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
         SetCountText();
         winTextObject.SetActive(false);
+        levelCompleteObject.SetActive(false);
 
         currentScene = SceneManager.GetActiveScene();
         buildIndex = currentScene.buildIndex;
@@ -42,9 +44,10 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if(count >= 12)
+        if(count >= 8)
         {
             winTextObject.SetActive(true);
+            levelCompleteObject.SetActive(true);
         }
     }
 
@@ -69,5 +72,10 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(buildIndex + 1);
         }
+    }
+
+    void OnButtonPress()
+    {
+        SceneManager.LoadScene(buildIndex + 1);
     }
 }
