@@ -3,7 +3,22 @@ guid: b76596a9711e61c418682452af44de16
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Transparent
+    second: {fileID: 2100000, guid: 6a33b02264a2a094e9d635d5cdb1aa24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trunk
+    second: {fileID: 2100000, guid: 8c0be2d48f2ecd24495c4eb37cb67a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green
+    second: {fileID: 2100000, guid: 4344933241964e245a9bc33c501b6848, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -39,7 +54,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
