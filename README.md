@@ -3,7 +3,7 @@ This is a ball rolling game.
 The Roll-a-Ball Game utilizes C# code, the Unity game engine, and Blender.
 
 
-<img src="Screenshots/Game Part 1.png" alt="Group Game Part 1"/>
+<img src="Screenshots/Assignment 4 Part 1.png" alt="Group Game Part 1"/>
 
 
 This game uses:
@@ -18,7 +18,7 @@ Additionally, custom collectables are available for the user to collect.
 This ersion also allows the user to enter another level of the game.
 The player must collect all the coins and then they move onto the next level.
 
-Additionally, a skybox was added to the project.
+Additionally, a skybox was added to the project (Avionx).
 The skybox series used to create the skybox for this game can be found here on the
 <a href="https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#content">Unity Asset Store website</a>.
 
