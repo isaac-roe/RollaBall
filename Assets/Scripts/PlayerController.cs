@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
@@ -77,5 +78,13 @@ public class PlayerController : MonoBehaviour
     void OnButtonPress()
     {
         SceneManager.LoadScene(buildIndex + 1);
+    }
+
+    void OnCollisionEnter(Collision Other)
+    {
+        if (Other.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

@@ -6,6 +6,8 @@ public class EnemyController : MonoBehaviour
 {
 
     public float lookRadius = 10f;
+    public float speed = 0;
+    public Rigidbody rb;
 
     Transform target;
     UnityEngine.AI.NavMeshAgent agent;
@@ -20,9 +22,12 @@ public class EnemyController : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
+
+        
 
         if (distance <= lookRadius)
         {
@@ -30,7 +35,7 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                //attack
+               
                 FaceTarget();
             }
         }
