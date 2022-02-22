@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Template/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scences/StartScene.unity
+    guid: e1c02b263f4c9b142bb3b8ed4bcffbd4
+  - enabled: 1
     path: Assets/Scences/BallGame.unity
     guid: d435c8c68c388a14ea848028942d18e8
   - enabled: 1
